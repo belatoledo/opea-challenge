@@ -1,1 +1,25 @@
-$primary-color: #ff0000 !important;
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap');
+
+// custom Font
+$body-font-family: 'Jost', sans-serif;
+$body-font-weight: 400;
+$heading-font-family: 'Jost', sans-serif;
+$heading-font-weight: 600;
+
+//Custom colors
+$brand-color: #630A37;
+$text-base-color: #616161;
+$detail-color: #DDDDDD;
+$bg-base-color: #FFFFFF;
+
+
+
+// Exemplo de uso das variáveis de cores personalizadas
+
+* { 
+    font-family: $body-font-family;
+}
+
+.title {
+  color: $text-base-color;
+}
