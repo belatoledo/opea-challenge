@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <form class="d-flex" role="search">
-      <input class="form-control bg-white" type="search" placeholder="Buscar empresa..." aria-label="Search">
+      <input class="form-control text-default bg-white" type="search" placeholder="Buscar empresa..." aria-label="Search">
       <button class="btn" type="submit">
         <img src="../assets/search-icon.svg" alt="Buscar">
       </button>
@@ -34,7 +34,7 @@ export default {
   position: absolute;
   display: flex;
   align-self: center;
-  right: 6px;
+  right: 16px;
   border: none;
 
   @include tablet-landscape-up {

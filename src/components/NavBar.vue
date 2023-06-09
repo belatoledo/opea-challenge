@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav class="navbar navbar-expand-lg bg-white">
-      <div class="mx-3 container-fluid">
+      <div class="mx-4 container-fluid">
         <a class="navbar-brand" href="#">
           <img src="@/assets/logo-opea.svg" alt="Logo" width="108" height="32" class="d-inline-block align-text-top">
         </a>
