@@ -6,15 +6,12 @@
       <button class="btn btn-outline-border-opea rounded-start-5 bg-opea d-flex flex-row align-items-center justify-content-start" type="button"> 
         <i class="bi bi-clipboard2-data-fill text-lg text-detail border border-detail rounded-circle px-2"></i>
         <span class="btn-text">
-          <ModalActions class="text-start"/>
+          <ModalActions class="text-start" /> <!--mexer no botão para abrir o modal -->
         </span> 
       </button>
 
       <EnterpriseCard class="mt-2"/>
     </div>
-
-    
-
   </div>
 </template>
 

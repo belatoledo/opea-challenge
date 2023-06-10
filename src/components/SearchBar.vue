@@ -38,7 +38,7 @@ export default {
   border: none;
 
   @include tablet-landscape-up {
-    top: 88px;
+    top: 86px;
     right: 45px;
   }
 }

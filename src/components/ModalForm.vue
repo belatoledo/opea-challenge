@@ -19,13 +19,10 @@
           <input type="email" class="form-control" id="inputEmail3">
         </div>
       </div>
-      <div class="d-flex flex-row justify-content-between">
-        <button class="btn btn-outline-detail border border-rounded-3">
-          <i class="bi bi-trash-fill text-default text-primary "></i>
-        </button>
+      <div class="d-flex flex-row justify-content-end">
         <div class="d-flex gap-3">
-          <button class="btn btn-outline-detail fw-medium">Cancelar</button>
-          <button type="submit" class="btn btn-primary fw-medium">Cadastrar</button>
+          <button class="btn btn-outline-detail px-4 fw-medium">Cancelar</button>
+          <button type="submit" class="btn btn-primary px-4 fw-medium">Cadastrar</button>
         </div>
       </div>
     </form>
