@@ -10,7 +10,7 @@
           </div>
         </div>
         
-        <div class="d-flex gap-1 mobile-icons">
+        <div class="d-flex gap-2 mobile-icons">
           <button class="btn btn-outline-border-opea border border-rounded-3" data-bs-toggle="modal" href="#exampleModalToggle">
             <i class="bi bi-pencil-fill text-default text-primary "></i>
           </button>
@@ -18,8 +18,8 @@
             <i class="bi bi-trash-fill text-default text-primary"></i>
           </button>
         </div>
-        <modal-form edit-enterprise="" />
       </div>
+      <modal-form />
     </div>
   </div>
 </template>
@@ -35,8 +35,7 @@ export default {
   },
   data() {
     return {
-      buttonName: 'Salvar',
-      modalTitle: 'Atualizar empresa',
+      filteredEnterprise: null,
     };
   },
   methods: {

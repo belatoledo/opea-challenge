@@ -7,12 +7,13 @@
         <i class="bi bi-clipboard2-data-fill text-lg text-detail border border-detail rounded-circle px-2"></i>
         <span class="btn-text">
           <a class="text-detail text-center fw-medium text-decoration-none" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Adicionar empresa</a>
-          <modal-form class="text-start" @add-new-enterprise="saveNewEnterprise" :enterprise="selectedEnterprise" @edit-enterprise="editEnterprise" />
+          <modal-form class="text-start" @add-new-enterprise="saveNewEnterprise" />
         </span> 
       </button>
 
-      <enterprise-card v-for="enterprise in enterprises" :key="enterprise.id" :enterprise="enterprise" @removed-enterprise="removeEnterprise" @edit-enterprise="editEnterprise" class="mt-2"/>
+      <enterprise-card v-for="enterprise in enterprises" :key="enterprise.id" :enterprise="enterprise" @removed-enterprise="removeEnterprise" class="mt-2"/>
     </div>
+
   </div>
 </template>
 
@@ -32,7 +33,6 @@ export default {
   data() {
     return {
       enterprises: [],
-      selectedEnterprise: null,
       loadEnterprises: false
     };
   },
@@ -40,38 +40,29 @@ export default {
     getEnterprises() {
       api.get('/clients')
         .then((response) => {
-          this.enterprises = response.data;
-          console.log(this.enterprises);
+          this.enterprises = response.data
+          console.log(this.enterprises)
        })
         .catch((error) => {
-          console.log(error);
+          console.log(error)
         });
     },
-    saveNewEnterprise(newEnterprise) {
-      api.post('/clients', newEnterprise)
+    saveNewEnterprise(enterprise) {
+      api.post('/clients', enterprise)
         .then(response => {
-          this.enterprises.push(response.data);
+          this.enterprises.push(response.data)
         })
         .catch(error => {
-          console.error(error);
-        });
-    },
-    editEnterprise(enterprise, enterpriseEdited) {
-      api.put(`/clients/${enterprise.id}`, enterprise)
-        .then(() => {
-          this.enterprises = this.enterprises.filter(enterprise => enterprise.id === enterpriseEdited.id)
-        })
-        .catch(error => {
-          console.error(error);
+          console.error(error)
         });
     },
     removeEnterprise(enterprise) {
       api.delete(`/clients/${enterprise.id}`)
         .then(() => {
-          this.enterprises = this.enterprises.filter(e => e.id !== enterprise.id);
+          this.enterprises = this.enterprises.filter(e => e.id !== enterprise.id)
         })
         .catch(error => {
-          console.error(error);
+          console.error(error)
         });
     }
   },
@@ -80,18 +71,17 @@ export default {
       handler() {
         if (!this.loadEnterprises) {
           this.getEnterprises();
-          this.loadEnterprises = true;
+          this.loadEnterprises = true
         } else {
-          this.loadEnterprises = false;
+          this.loadEnterprises = false
         }
       },
       immediate: true,
       deep: true
     }
-    }
-  }
-
-
+  },
+  
+}
 </script>
 
 <style scoped lang="scss">
